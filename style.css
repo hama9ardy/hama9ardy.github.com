@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+/* go on then, styles go here.. knock yourself out! */
+ @keyframes pulsate {
+	 0% {
+		 transform: scale(0.6, 0.6);
+		 opacity: 0;
+	}
+	 50% {
+		 opacity: 1;
+	}
+	 100% {
+		 transform: scale(1, 1);
+		 opacity: 0;
+	}
+}
+
+
+ body {
+	 background-color: rgb(0, 0, 0);
+	 background-repeat: repeat, no-repeat;
+	 background-size: auto, 100% 100%;
+	 background-attachment: fixed;
+	 color: #ecf0f1;
+	 font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	 font-size: 16px;
+	 line-height: 1.5;
+	 font-weight: 300;
+	 min-height: 100%;
+	 margin: 0px;
+	 width: 100%;
+}
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+html {
+  overflow-y: scroll; 
+}
+
+span{
+	color: rgb(255, 163, 57);
+}
+
+span.myRedA{
+	color:rgb(255, 163, 57);
+ }
+
+body {
+  font: .875em/1.6 'Inconsolata', monospace;
+ 
+}
+::selection{
+  background: #eee
+}
+::-webkit-selection{
+  background: #eee
+}
+::-moz-selection{
+  background: #eee
+}
+a{
+  color: #181818;
+}
+a:hover,a:focus{
+  background: #181818;
+  color:#fff;
+}
+h2{
+  font-size: 1em;
+  font-weight: 400;
+}
+p{
+  margin-bottom:2em;
+}
+abbr{
+  cursor: help;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  margin:1em 0 0;
+}
+span{
+  display: block;
+  color:#999;
+  line-height:1;
+}
+
+kbd{
+  font-family: 'Inconsolata', monospace;
+  border:1px solid #999;
+  text-transform: uppercase;
+  padding:0 .2em;
+}
+input[type="text"]{
+  max-width: 10em;
+  border: none;
+  font-family: inherit;
+  background: #fff;
+  padding:0 .5em;
+}
+input[type="text"]:focus{
+  background: #fff;
+  color: #000;
+  outline:none;
+}
+.command{
+  display: block;
+  max-width: 20em;
+  color: #181818;
+  font-weight: 700;
+  margin: 2em 0;
+}
+
+
+section{
+  display: none;
+}
+.open{
+  display: block;
+}
+
+
+ .profile-card {
+	 height: 475px;
+	 width: 300px;
+	 position: relative;
+	 margin: 4em auto;
+	 background-position: 50% 50%;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+}
+ .profile-card header {
+	 width: 100%;
+	 height: 25%;
+	 text-align: center;
+	 background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	/* FF3.6+ */
+	 background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0)));
+	/* Chrome,Safari4+ */
+	 background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	/* Chrome10+,Safari5.1+ */
+	 background: -o-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	/* Opera 11.10+ */
+	 background: -ms-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	/* IE10+ */
+	 background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+	/* W3C */
+	 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#00000000',GradientType=1);
+	/* IE6-9 fallback on horizontal gradient */
+}
+ .profile-card header a {
+	 position: relative;
+}
+ .profile-card header a:before {
+	 content: "";
+	 border: 15px solid rgba(51, 255, 0, 0.582);
+	 border-radius: 50%;
+	 height: 90px;
+	 width: 90px;
+	 position: absolute;
+	 left: 0;
+	 bottom: 3px;
+	 animation: pulsate 1.6s ease-out;
+	 animation-iteration-count: infinite;
+	 opacity: 0;
+	 z-index: 99;
+}
+ .profile-card header img {
+	 position: relative;
+	 border-radius: 50%;
+	 height: 90px;
+	 width: 90px;
+	 padding: 0;
+	 margin: 0;
+	 border: 15px solid transparent;
+	 margin-top: 12px;
+	 z-index: 9999;
+	 transition: all 0.3s ease-out;
+}
+ .profile-card header a:hover img {
+	 transform: scale(1.06, 1.06);
+}
+ .profile-card header a:hover:before {
+	 animation: none;
+}
+ .profile-card header h1 {
+	 text-align: center;
+	 font-size: 28px;
+	 font-weight: 400;
+	 opacity: 0.9;
+	 margin-bottom: 8px;
+}
+ .profile-card header h2 {
+	 font-size: 18px;
+	 margin-top: 0;
+	 opacity: 0.9;
+}
+ .profile-card .profile-bio {
+	 position: absolute;
+	 bottom: 0;
+}
+ .profile-card .profile-bio p {
+	 margin: 24px;
+	 text-align: center;
+	 opacity: 0.9;
+}
+ .profile-card .profile-social-links {
+	 position: relative;
+	 background-color: transparent;
+	 margin: 0 auto;
+	 text-align: center;
+	 padding: 6px 0;
+}
+ .profile-card .profile-social-links li {
+	 display: inline-block;
+	 padding: 3px 5px 0;
+}
+ .profile-card .profile-social-links li img {
+	 height: 28px;
+	 opacity: 0.8;
+	 transition: all 0.2s ease-out;
+}
+ .profile-card .profile-social-links li a:hover img {
+	 opacity: 1;
+	 transform: scale(1.1, 1.1);
+}
+ .profile-card .profile-social-links:after {
+	 bottom: 100%;
+	 left: 50%;
+	 border: solid transparent;
+	 content: " ";
+	 height: 0;
+	 width: 0;
+	 position: absolute;
+	 pointer-events: none;
+	 border-color: rgba(0, 0, 0, 0);
+	 border-bottom-color: rgb(79, 241, 79);
+	 border-width: 10px;
+	 margin-left: -10px;
+}
+ 
