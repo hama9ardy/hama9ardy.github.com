@@ -42,44 +42,7 @@
    
    // Debug
    //console.log(sectionArray);
-   
-   
-   
-   // Command Input------------------------------
-   
-     $('input[type="text"]').keyup(function(e){
-   
-       if(e.which == 13){// ENTER key pressed
-   
-         $('.command').hide();
-         var destination = $('input[type="text"]').val();
-   
-         // Display section with id == destination and hide all others
-         $('section[id="' + destination + '"]').addClass('open').siblings().removeClass('open');
-   
-         // If destination does not match our array of section ids, display error section
-         if($.inArray(destination, sectionArray) == -1){
-           $('#error').addClass('open');
-           $('#error').siblings().removeClass('open');
-         }
-   
-         // All sections with class .open init textTyper
-         $('.open').textTyper({
-           speed:20,
-           afterAnimation:function(){
-             $('.command').fadeIn();
-             $('input[type="text"]').focus();
-             $('input[type="text"]').val('');
-           }
-         });
-   
-       }// end if ENTER key pressed
-   
-     });// end keyup function
-   
-   // End Command Input-----------------------------
-   
-   });</script>
+
 </head>
 <body>
 <aside class="profile-card">
@@ -93,8 +56,7 @@
       <img src="https://i.ibb.co/HYLPKrV/04-BB5-A0-D-953-C-463-E-8-DC3-8-D3-ECE607-E4-C.jpg">
     </a>
 
-<!-- VISA Tracking Code for Hamagardy.com --><script>(function(v,i,s,a){if(!v._visaSettings){v._visaSettings={};}v._visaSettings["657e2353-5cd6-11eb-b589-901b0edac50a"]={v:"0.3",s:"657e2353-5cd6-11eb-b589-901b0edac50a",a:"1"};_v=i.getElementsByTagName("head")[0];_a=_v;_i=i.createElement("script");_s=_i;_s.defer="defer";_s.src=s+a+v._visaSettings["657e2353-5cd6-11eb-b589-901b0edac50a"].v;_a.appendChild(_s);})(window,document,"//app-worker.visitor-analytics.io/main",".js?s=657e2353-5cd6-11eb-b589-901b0edac50a&v=")</script><!-- VISA Tracking Code for Hamagardy.com -->
-   
+
   </header>
 <center style="color: rgb(79, 241, 79);"><h1 >Hama9ardy</h1>
 
