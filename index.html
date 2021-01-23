@@ -1,204 +1,80 @@
-<head>
-  
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="mac.css">
-   <meta charset="utf-8">
-   <script translate="text/scripts" src="java.js"></script>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Hama9ardy</title>
-
- <script src="jquery-3.5.1.min.js.js"></script>
-<script>window.oncontextmenu = function () {
-  return false;
-}</script>
-   
-   <script>
-   (function(e){"use strict";e.fn.textTyper=function(t){var n={typingClass:"typing",beforeAnimation:function(){},afterAnimation:function(){},speed:10,nextLineDelay:400,startsFrom:0,repeatAnimation:false,repeatDelay:4e3,repeatTimes:1,cursorHtml:'<span class="cursor">|</span>'},r=e.extend({},n,t);this.each(function(){var t=e(this),n=1,i="typingCursor";var s=t,o=s.length,u=[];while(o--){u[o]=e.trim(e(s[o]).html());e(s[o]).html("")}t.init=function(e){var n=r.beforeAnimation;if(n)n();t.animate(0)};t.animate=function(o){var a=s[o],f=r.typingClass,l=r.startsFrom;e(a).addClass(f);var c=setInterval(function(){var f=r.cursorHtml;f=e("<div>").append(e(f).addClass(i)).html();e(a).html(u[o].substr(0,l)+f);l++;if(u[o].length<l){clearInterval(c);o++;if(s[o]){setTimeout(function(){e(a).html(u[o-1]);t.animate(o)},r.nextLineDelay)}else{e(a).find("."+i).remove();if(r.repeatAnimation&&(r.repeatTimes==0||n<r.repeatTimes)){setTimeout(function(){t.animate(0);n++},r.repeatDelay)}else{var h=r.afterAnimation;if(h)h()}}}},r.speed)};t.init()});return this}})(jQuery)
-   
-   
-   // Let's do it!!
-   $(document).ready(function() {
-   
-     $('.command').hide();
-     $('input[type="text"]').focus();
-     $('#home').addClass('open');
-     $('#home').textTyper({
-           speed:20,
-           afterAnimation:function(){
-             $('.command').fadeIn();
-             $('input[type="text"]').focus();
-             $('input[type="text"]').val('');
-           }
-         });
-   
-   // get array of section ids, that exist in DOM
-   var sectionArray = [];
-   // We are using <section> here, you can use <div> or <article> if you want
-   $('section').each( function(i,e) {
-       //you can use e.id instead of $(e).attr('id')
-       sectionArray.push($(e).attr('id'));
-   });
-   
-   // Debug
-   //console.log(sectionArray);
-</script>
-  <script>
-setTimeout(function(){
-        $(".element0").typed({
-            strings: ["apt-get install konquer"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 0);
-
-setTimeout(function(){
-        $(".element1").css("display", "inherit");
-        $(".element1").typed({
-            strings: ["konquer -r /world"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 2000);
-
-setTimeout(function(){
-        $(".element2").css("display", "inherit");
-        $(".element2").typed({
-            strings: ["chown gabriel /world"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 4000);
-
-setTimeout(function(){
-        $(".element3").css("display", "inherit");
-        $(".element3").typed({
-            strings: ["chmod 700 /world"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 6000);
-
-setTimeout(function(){
-        $(".element4").css("display", "inherit");
-        $(".element4").typed({
-            strings: ["chown parents /world/australia"],
-            typeSpeed: 30, // typing speed
-            backDelay: 750, // pause before backspacing
-            loop: false, // loop on or off (true or false)
-            loopCount: false, // number of loops, false = infinite
-            callback: function(){ } // call function after typing is done
-        });
-    }, 8000);
-  </script>
-
-</head>
-<body>
-<aside class="profile-card">
- 
-  <br>
-  
-  <header>
-    
-    <!-- here’s the avatar -->
-    <a href="">
-      <img src="https://i.ibb.co/HYLPKrV/04-BB5-A0-D-953-C-463-E-8-DC3-8-D3-ECE607-E4-C.jpg">
-    </a>
-
-
-  </header>
-<center style="color: rgb(79, 241, 79);"><h1 >Hama9ardy</h1>
-
-      
-<div class="window" style="margin: auto;
-;">
-  <div class="titlebar">
-    <div class="buttons">
-      <div class="close">
-        <a class="closebutton" href="#"><span><strong>x</strong></span></a>
-        <!-- close button link -->
+<div class="card" data-state="#about">
+  <div class="card-header">
+    <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
+    <img class="card-avatar" src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" alt="avatar" />
+    <h1 class="card-fullname">William Rocheald</h1>
+    <h2 class="card-jobtitle">UI Developer</h2>
+  </div>
+  <div class="card-main">
+    <div class="card-section is-active" id="about">
+      <div class="card-content">
+        <div class="card-subtitle">ABOUT</div>
+        <p class="card-desc">Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.
+        </p>
       </div>
-      <div class="minimize">
-        <a class="minimizebutton" href="#"><span><strong>&ndash;</strong></span></a>
-        <!-- minimize button link -->
-      </div>
-      <div class="zoom">
-        <a class="zoombutton" href="#"><span><strong>+</strong></span></a>
-        <!-- zoom button link -->
+      <div class="card-social">
+        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z" /></svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z" /></svg></a>
+        <a href="#"><svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0" />
+            <path d="M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75 33.645 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0" />
+            <path d="M377 0H135C60.562 0 0 60.563 0 135v242c0 74.438 60.563 135 135 135h242c74.438 0 135-60.563 135-135V135C512 60.562 451.437 0 377 0zm45 332c0 49.625-40.375 90-90 90H180c-49.625 0-90-40.375-90-90V180c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0" /></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
       </div>
     </div>
-    <!-- window title -->
-  </div>
-  <div class="content">
-    <main>
-      <section id="home" style="color:rgb(79, 241, 79); text-align: center;">
-      
-<div class='element0'>gabriel@lowercase ~$ </div>
-<div class='element1 nodisplay'>gabriel@lowercase ~$ </div>
-<div class='element2 nodisplay'>gabriel@lowercase ~$ </div>
-<div class='element3 nodisplay'>gabriel@lowercase ~$ </div>
-<div class='element4 nodisplay'>gabriel@lowercase ~$ </div></p>
-      </section>
-      
-     
-      
-      </main>
-    <!-- window content -->
+    <div class="card-section" id="experience">
+      <div class="card-content">
+        <div class="card-subtitle">WORK EXPERIENCE</div>
+        <div class="card-timeline">
+          <div class="card-item" data-year="2014">
+            <div class="card-item-title">Front-end Developer at <span>JotForm</span></div>
+            <div class="card-item-desc">Disrupt stumptown retro everyday carry unicorn.</div>
+          </div>
+          <div class="card-item" data-year="2016">
+            <div class="card-item-title">UI Developer at <span>GitHub</span></div>
+            <div class="card-item-desc">Developed new conversion funnels and disrupt.</div>
+          </div>
+          <div class="card-item" data-year="2018">
+            <div class="card-item-title">Illustrator at <span>Google</span></div>
+            <div class="card-item-desc">Onboarding illustrations for App.</div>
+          </div>
+          <div class="card-item" data-year="2020">
+            <div class="card-item-title">Full-Stack Developer at <span>CodePen</span></div>
+            <div class="card-item-desc">Responsible for the encomposing brand expreience.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-section" id="contact">
+      <div class="card-content">
+        <div class="card-subtitle">CONTACT</div>
+        <div class="card-contact-wrapper">
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+              <circle cx="12" cy="10" r="3" /></svg>
+            Algonquin Rd, Three Oaks Vintage, MI, 49128
+          </div>
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(269) 756-9809</div>
+          <div class="card-contact">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="M22 6l-10 7L2 6" /></svg>
+            william@rocheald.com
+          </div>
+          <button class="contact-me">WORK TOGETHER</button>
+        </div>
+      </div>
+    </div>
+    <div class="card-buttons">
+      <button data-section="#about" class="is-active">ABOUT</button>
+      <button data-section="#experience">EXPERIENCE</button>
+      <button data-section="#contact">CONTACT</button>
+    </div>
   </div>
 </div>
-<BR>
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-    
-    
-    
-  </div>
-  
-  <!-- some social links to show off -->
-  <ul class="profile-social-links">
-    
-    <!-- twitter - el clásico  -->
-    <li>
-      <a target="_blank" href="http://grabify.link/L6PXFQ">
-        <img src="t.png">
-      </a>
-    </li>
-    
-    <!-- envato – use this one to link to your marketplace profile -->
-    <li>
-      <a target="_blank" href="http://grabify.link/P15GID">
-        <img src="tell.png">
-      </a>
-    </li>
-    
-    <!-- codepen - your codepen profile-->
-   
-    
-    <!-- add or remove social profiles as you see fit -->
-    
-  </ul>
-  <footer>
-    <p>© 2020 </p><br>
-  </footer>
-</aside>
-
-</center>
-<!-- Hitsteps TRACKING CODE - Manual 2020-05-31 - DO NOT CHANGE -->
-<script type="text/javascript">(function(){var hstc=document.createElement('script'); hstc.src='https://log.hitsteps.com/track.php?code=14c3669da9219cb9c987a27260efb2f3';hstc.async=true;var htssc = document.getElementsByTagName('script')[0];htssc.parentNode.insertBefore(hstc, htssc);})();
-</script><noscript><a href="http://www.hitsteps.com/"><img src="//log.hitsteps.com/track.php?mode=img&amp;code=14c3669da9219cb9c987a27260efb2f3" alt="web stats" width="1" height="1" />website statistics</a></noscript>
-<!-- Hitsteps TRACKING CODE - DO NOT CHANGE -->
-</body>
