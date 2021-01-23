@@ -4,6 +4,8 @@
    body {
     
     font-family: HelveticaNeue, 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+  background-color: black;
+  color: #1EFF00;
   }
   
   /* window BEGIN */
@@ -15,6 +17,11 @@
   span {
     line-height: 9px;
     vertical-align: 50%;
+  }
+  
+
+.nodisplay {
+  display: none;
   }
   
   .window {
